@@ -579,6 +579,18 @@
         <box size = "0.164 0.149 0.248"/>
       </geometry>
     </collision>
+    <collision>
+      <origin xyz="-0.116106 0 0.062336" rpy="0 0.789 0" />
+      <geometry>
+        <box size = "0.019 0.108 0.019"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0.13" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.075"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="torso_joint" type="revolute">
     <origin xyz="0 0 0.24776" rpy="0 0 0" />
