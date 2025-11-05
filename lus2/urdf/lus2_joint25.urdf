@@ -25,7 +25,7 @@
         <box size = "0.001 0.001 0.001"/>
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <collision>
@@ -60,7 +60,7 @@
         <mesh filename="../meshes/pelvis.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -95,7 +95,7 @@
         <mesh filename="../meshes/left_hip_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -138,7 +138,7 @@
         <mesh filename="../meshes/left_hip_roll_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -181,7 +181,7 @@
         <mesh filename="../meshes/left_hip_yaw_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -219,12 +219,12 @@
         izz="8.1731788e-03" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 -0.01 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_knee_link.STL" />
+        <mesh filename="../meshes/left_knee_link_v1.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -262,12 +262,12 @@
         izz="5.5144716e-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0.015 -0.00125 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/left_ankle_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -305,12 +305,12 @@
         izz="1.4703900e-03" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="-0.00 -0.009 0.41" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_ankle_roll_link.STL" />
+        <mesh filename="../meshes/left_ankle_roll_link_v1.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -406,7 +406,7 @@
         <mesh filename="../meshes/right_hip_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -449,7 +449,7 @@
         <mesh filename="../meshes/right_hip_roll_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -492,7 +492,7 @@
         <mesh filename="../meshes/right_hip_yaw_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -530,12 +530,12 @@
         izz="8.1731791e-03" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0.01 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_knee_link.STL" />
+        <mesh filename="../meshes/right_knee_link_v1.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -573,12 +573,12 @@
         izz="5.5144716e-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0.015 0.00125 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/right_ankle_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -616,12 +616,12 @@
         izz="1.4703900e-03" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="-0.00 0.009 0.41" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_ankle_roll_link.STL" />
+        <mesh filename="../meshes/right_ankle_roll_link_v1.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -717,7 +717,7 @@
         <mesh filename="../meshes/torso_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -760,7 +760,7 @@
         <mesh filename="../meshes/head_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -803,7 +803,7 @@
         <mesh filename="../meshes/left_shoulder_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -846,7 +846,7 @@
         <mesh filename="../meshes/left_shoulder_roll_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -889,7 +889,7 @@
         <mesh filename="../meshes/left_shoulder_yaw_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -932,7 +932,7 @@
         <mesh filename="../meshes/left_elbow_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -975,7 +975,7 @@
         <mesh filename="../meshes/left_wrist_yaw_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1018,7 +1018,7 @@
         <mesh filename="../meshes/left_wrist_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1061,7 +1061,7 @@
         <mesh filename="../meshes/left_wrist_roll_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
 
@@ -1072,7 +1072,7 @@
         <mesh filename="../meshes/left_hand_link.STL" scale="1 1 1"/>
       </geometry>
       <material name="hand_material">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.05 0.05 0.05 1"/>
       </material>
     </visual>
     <collision>
@@ -1123,7 +1123,7 @@
         <mesh filename="../meshes/right_shoulder_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1166,7 +1166,7 @@
         <mesh filename="../meshes/right_shoulder_roll_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1209,7 +1209,7 @@
         <mesh filename="../meshes/right_shoulder_yaw_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1252,7 +1252,7 @@
         <mesh filename="../meshes/right_elbow_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1295,7 +1295,7 @@
         <mesh filename="../meshes/right_wrist_yaw_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1338,7 +1338,7 @@
         <mesh filename="../meshes/right_wrist_pitch_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
     </visual>
     <!-- <collision>
@@ -1381,7 +1381,7 @@
         <mesh filename="../meshes/right_wrist_roll_link.STL" />
       </geometry>
       <material name="a">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+        <color rgba="0.05 0.05 0.05 1" />
       </material>
 
 
@@ -1393,7 +1393,7 @@
         <mesh filename="../meshes/right_hand_link.STL" scale="1 1 1"/>
       </geometry>
       <material name="hand_material_right">
-        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
+        <color rgba="0.05 0.05 0.05 1"/>
       </material>
     </visual>
     <collision>
