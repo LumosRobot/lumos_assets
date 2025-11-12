@@ -81,7 +81,7 @@
     <parent link="pelvis" />
     <child link="left_hip_pitch_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-2.4" upper="1.5708" effort="102" velocity="14.6" />
+    <limit lower="-1.6755" upper="1.5708" effort="102" velocity="14.6" />
   </joint>
 
   <link name="left_hip_roll_link">
@@ -333,7 +333,7 @@
     <parent link="pelvis" />
     <child link="right_hip_pitch_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-2.4" upper="1.5708" effort="102" velocity="14.6" />
+    <limit lower="-1.6755" upper="1.5708" effort="102" velocity="14.6" />
   </joint>
 
   <link name="right_hip_roll_link">
@@ -589,18 +589,6 @@
       <origin xyz="0 0 0.13" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.075"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0 0.071834 -0.076656" rpy="-0.13 0 0" />
-      <geometry>
-        <box size = "0.164 0.0351 0.219"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0 -0.071834 -0.076656" rpy="0.13 0 0" />
-      <geometry>
-        <box size = "0.164 0.0351 0.219"/>
       </geometry>
     </collision>
   </link>
