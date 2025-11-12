@@ -219,7 +219,7 @@
         izz="8.1731788e-03" />
     </inertial>
     <visual>
-      <origin xyz="0 -0.01 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/left_knee_link_v1.STL" />
       </geometry>
@@ -262,7 +262,7 @@
         izz="5.5144716e-05" />
     </inertial>
     <visual>
-      <origin xyz="0.015 -0.00125 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/left_ankle_pitch_link.STL" />
       </geometry>
@@ -305,7 +305,7 @@
         izz="1.4703900e-03" />
     </inertial>
     <visual>
-      <origin xyz="-0.00 -0.009 0.41" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/left_ankle_roll_link_v1.STL" />
       </geometry>
@@ -530,7 +530,7 @@
         izz="8.1731791e-03" />
     </inertial>
     <visual>
-      <origin xyz="0 0.01 0" rpy="0 0 0" />
+      <origin xyz="0 0.0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/right_knee_link_v1.STL" />
       </geometry>
@@ -573,7 +573,7 @@
         izz="5.5144716e-05" />
     </inertial>
     <visual>
-      <origin xyz="0.015 0.00125 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/right_ankle_pitch_link.STL" />
       </geometry>
@@ -616,7 +616,7 @@
         izz="1.4703900e-03" />
     </inertial>
     <visual>
-      <origin xyz="-0.00 0.009 0.41" rpy="0 0 0" />
+      <origin xyz="-0.00 0.00 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="../meshes/right_ankle_roll_link_v1.STL" />
       </geometry>
