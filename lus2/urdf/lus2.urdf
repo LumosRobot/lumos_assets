@@ -24,8 +24,8 @@
       <geometry>
         <box size = "0.001 0.001 0.001"/>
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="white">
+        <color rgba="0.7 0.7 0.7 1"   />
       </material>
     </visual>
     <collision>
@@ -59,8 +59,13 @@
       <geometry>
         <mesh filename="../meshes/pelvis.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -94,8 +99,13 @@
       <geometry>
         <mesh filename="../meshes/left_hip_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+     <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -137,8 +147,13 @@
       <geometry>
         <mesh filename="../meshes/left_hip_roll_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -180,8 +195,13 @@
       <geometry>
         <mesh filename="../meshes/left_hip_yaw_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -224,8 +244,13 @@
       <geometry>
         <mesh filename="../meshes/left_knee_link_v1.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -268,8 +293,13 @@
       <geometry>
         <mesh filename="../meshes/left_ankle_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -311,8 +341,13 @@
       <geometry>
         <mesh filename="../meshes/left_ankle_roll_link_v1.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -407,8 +442,13 @@
       <geometry>
         <mesh filename="../meshes/right_hip_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -450,8 +490,13 @@
       <geometry>
         <mesh filename="../meshes/right_hip_roll_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -493,8 +538,13 @@
       <geometry>
         <mesh filename="../meshes/right_hip_yaw_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -536,8 +586,13 @@
       <geometry>
         <mesh filename="../meshes/right_knee_link_v1.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -579,8 +634,13 @@
       <geometry>
         <mesh filename="../meshes/right_ankle_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -622,8 +682,13 @@
       <geometry>
         <mesh filename="../meshes/right_ankle_roll_link_v1.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -718,8 +783,13 @@
       <geometry>
         <mesh filename="../meshes/torso_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <collision>
@@ -734,6 +804,25 @@
         <box size = "0.205 0.178 0.246"/>
       </geometry>
     </collision> -->
+    <!-- 添加 LOGO -->
+    <visual>
+      <origin xyz="0.00 0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/logo1_link.STL"/>
+      </geometry>
+      <material name="dark">
+            <color rgba="0.2 0.2 0.2 1"   />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.00 0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/logo2_link.STL"/>
+      </geometry>
+      <material name="dark">
+            <color rgba="0.2 0.2 0.2 1"   />
+      </material>
+</visual>
   </link>
 
   <joint name="torso_joint" type="revolute">
@@ -761,8 +850,13 @@
       <geometry>
         <mesh filename="../meshes/head_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -804,8 +898,13 @@
       <geometry>
         <mesh filename="../meshes/left_shoulder_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -847,8 +946,13 @@
       <geometry>
         <mesh filename="../meshes/left_shoulder_roll_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -890,8 +994,13 @@
       <geometry>
         <mesh filename="../meshes/left_shoulder_yaw_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -933,8 +1042,13 @@
       <geometry>
         <mesh filename="../meshes/left_elbow_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -976,8 +1090,13 @@
       <geometry>
         <mesh filename="../meshes/left_wrist_yaw_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1019,8 +1138,13 @@
       <geometry>
         <mesh filename="../meshes/left_wrist_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1062,8 +1186,13 @@
       <geometry>
         <mesh filename="../meshes/left_wrist_roll_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
 
@@ -1074,7 +1203,7 @@
         <mesh filename="../meshes/left_hand_link.STL" scale="1 1 1"/>
       </geometry>
       <material name="hand_material">
-        <color rgba="0.05 0.05 0.05 1"/>
+        <color rgba="0.7 0.7 0.7 1" />
       </material>
     </visual>
     <collision>
@@ -1124,8 +1253,13 @@
       <geometry>
         <mesh filename="../meshes/right_shoulder_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1167,8 +1301,13 @@
       <geometry>
         <mesh filename="../meshes/right_shoulder_roll_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1210,8 +1349,13 @@
       <geometry>
         <mesh filename="../meshes/right_shoulder_yaw_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1253,8 +1397,13 @@
       <geometry>
         <mesh filename="../meshes/right_elbow_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1296,8 +1445,13 @@
       <geometry>
         <mesh filename="../meshes/right_wrist_yaw_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1339,8 +1493,13 @@
       <geometry>
         <mesh filename="../meshes/right_wrist_pitch_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
     </visual>
     <!-- <collision>
@@ -1382,11 +1541,14 @@
       <geometry>
         <mesh filename="../meshes/right_wrist_roll_link.STL" />
       </geometry>
-      <material name="a">
-        <color rgba="0.05 0.05 0.05 1" />
+      <material name="metallic_gray">
+        <color rgba="0.75 0.75 0.78 1.0"/>
+        <!-- 金属材质属性 -->
+        <specular>0.8 0.8 0.8 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+        <!-- 金属光泽度 -->
+        <shininess>100</shininess>
       </material>
-
-
     </visual>
 
     <visual>
@@ -1395,7 +1557,7 @@
         <mesh filename="../meshes/right_hand_link.STL" scale="1 1 1"/>
       </geometry>
       <material name="hand_material_right">
-        <color rgba="0.05 0.05 0.05 1"/>
+        <color rgba="0.7 0.7 0.7 1"  />
       </material>
     </visual>
     <collision>
