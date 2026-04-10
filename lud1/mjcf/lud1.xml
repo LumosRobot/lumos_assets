@@ -1,0 +1,224 @@
+<mujoco model="lud1">
+  <compiler angle="radian" meshdir="../meshes/"/>
+
+  <default>
+      <default class="lud1">
+          <geom friction="0.5" margin="0.001"/>
+          <joint type="hinge" damping="1" armature="0.1" frictionloss="0.1" limited="true"/>
+          <motor ctrlrange="-200 200" />
+          <default class="visual">
+              <geom type="mesh" contype="0" conaffinity="0" group="2" material="dark"/>
+          </default>
+          <default class="collision">
+              <geom group="0" type="capsule" mass="0" density="0" />
+              <default class="foot">
+                  <geom type="sphere" priority="1" solimp="0.015 1 0.031" condim="6"  friction="0.8 0.02 0.01" size="0.025" pos="0.019 0 -0.105" quat="1 0 0 0" rgba="0.189804 0.176471 0.129412 1" />
+              </default>
+          </default>
+          <site size="0.001" rgba="0.5 0.5 0.5 0.3" group="4"/>
+      </default>
+  </default>
+
+  <asset>
+    <mesh name="trunk" file="trunk.STL"/>
+    <mesh name="FL_link1" file="FL_link1.STL"/>
+    <mesh name="FL_link2" file="FL_link2.STL"/>
+    <mesh name="FL_link3" file="FL_link3.STL"/>
+    <mesh name="FL_foot" file="FL_foot.STL"/>
+    <mesh name="FR_link1" file="FR_link1.STL"/>
+    <mesh name="FR_link2" file="FR_link2.STL"/>
+    <mesh name="FR_link3" file="FR_link3.STL"/>
+    <mesh name="FR_foot" file="FR_foot.STL"/>
+    <mesh name="HL_link1" file="HL_link1.STL"/>
+    <mesh name="HL_link2" file="HL_link2.STL"/>
+    <mesh name="HL_link3" file="HL_link3.STL"/>
+    <mesh name="HL_foot" file="HL_foot.STL"/>
+    <mesh name="HR_link1" file="HR_link1.STL"/>
+    <mesh name="HR_link2" file="HR_link2.STL"/>
+    <mesh name="HR_link3" file="HR_link3.STL"/>
+    <mesh name="HR_foot" file="HR_foot.STL"/>
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="100" height="100"/>
+    <material name="MatPlane" reflectance="0.5" texture="texplane" texrepeat="1 1" texuniform="true"/>
+  </asset>
+
+  <worldbody>
+    <geom name="floor" friction="1 .1 .1" pos="0 0 0" size="500 500 0.125" type="plane" material="MatPlane" condim="3" conaffinity="1" contype="1" group="2" rgba="0.8 0.9 0.8 1"></geom>                                                                                                                                                      
+    <light cutoff="100" diffuse="1 1 1" dir="-0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular=".1 .1 .1" castshadow="false"/>  
+    <body name="trunk" pos="0 0 0.7" childclass="lud1">
+      <inertial pos="6.8032439e-03 1.7613329e-03 -4.8894424e-02" quat="0 0 0 1" mass="22.512291" diaginertia="1.8868718e-01 1.1911150e+00 1.2670589e+00" />
+      <joint name="floating_base_joint" type="free" limited="false" actuatorfrclimited="false"/>
+      <site name='imu' size='0.01' pos='0.0 0 0.0'/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="trunk"/>
+      <geom size="0.06 0.065 0.0875" pos="0.425 0 -0.025" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+      <geom size="0.28 0.15 0.085" pos="0 0 -0.05" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+      <geom size="0.055 0.055 0.07" pos="-0.41 0 -0.025" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+      <body name="FL_link1" pos="0.28429 0.059957 -0.052238">
+        <inertial pos="0.0788815 0.0881322 -0.000103147" quat="0.653114 0.649876 0.279675 0.269971" mass="2.89276" diaginertia="0.010038 0.00917202 0.00538192"/>
+        <joint name="FL_joint1" pos="0 0 0" axis="1 0 0" range="-0.785 0.698" actuatorfrcrange="-300 300"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FL_link1"/>
+        <geom size="0.05 0.013" pos="0.012 0 0" quat="0.707388 0 0.706825 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <geom size="0.065 0.043" pos="0.09 0.095 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <body name="FL_link2" pos="0.088999 0.13 0">
+          <inertial pos="-0.00217294 0.0505098 -0.207263" quat="0.722473 -0.0334015 0.0428731 0.689259" mass="3.0117" diaginertia="0.0309582 0.0290355 0.00408443"/>
+          <joint name="FL_joint2" pos="0 0 0" axis="0 1 0" range="-1.57 1.57" actuatorfrcrange="-300 300"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FL_link2"/>
+          <geom size="0.05 0.0225" pos="0 0.04 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.05 0.0225 0.1" pos="-0.005 0.04 -0.09" quat="0.999391 0 0.0348994 0" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.065 0.04" pos="0 0.065 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <body name="FL_link3" pos="0 0.032535 -0.26">
+            <inertial pos="0.00343905 -0.00804318 -0.168188" quat="0.640627 -0.0241394 0.022993 0.767129" mass="1.66014" diaginertia="0.0208058 0.0203063 0.00135907"/>
+            <joint name="FL_joint3" pos="0 0 0" axis="0 1 0" range="-2.5307 1.57" actuatorfrcrange="-300 300"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FL_link3"/>
+            <geom size="0.048 0.013" pos="0 -0.022 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.045 0.013 0.125" pos="0.003 -0.022 -0.13" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.047 0.013" pos="0 -0.022 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <body name="FL_foot" pos="0 0.035053 -0.26">
+              <inertial pos="0 0.00922002 0" quat="0.499995 0.500005 0.499995 0.500005" mass="2.05431" diaginertia="0.00818673 0.00444444 0.00444444"/>
+              <joint name="FL_TO_FOOT" pos="0 0 0" axis="0 1 0" range="-99999999 99999999" actuatorfrcrange="-100 100"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FL_foot"/>
+              <geom size="0.09 0.026" pos="0 0.008 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="FR_link1" pos="0.28429 -0.062043 -0.052238">
+        <inertial pos="0.0788815 -0.0881322 0.000103147" quat="0.279675 0.269971 0.653114 0.649876" mass="2.89276" diaginertia="0.010038 0.00917202 0.00538192"/>
+        <joint name="FR_joint1" pos="0 0 0" axis="1 0 0" range="-0.698 0.785" actuatorfrcrange="-300 300"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FR_link1"/>
+        <geom size="0.05 0.013" pos="0.012 0 0" quat="0.707388 0 0.706825 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <geom size="0.065 0.043" pos="0.09 -0.095 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <body name="FR_link2" pos="0.088999 -0.13 0">
+          <inertial pos="-0.00217294 -0.0505098 -0.207263" quat="0.689259 0.0428731 -0.0334015 0.722473" mass="3.0117" diaginertia="0.0309582 0.0290355 0.00408443"/>
+          <joint name="FR_joint2" pos="0 0 0" axis="0 1 0" range="-1.57 1.57" actuatorfrcrange="-300 300"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FR_link2"/>
+          <geom size="0.05 0.0225" pos="0 -0.04 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.05 0.0225 0.1" pos="-0.005 -0.04 -0.09" quat="0.999391 0 0.0348994 0" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.065 0.04" pos="0 -0.065 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <body name="FR_link3" pos="0 -0.032535 -0.26">
+            <inertial pos="0.00346688 0.00821661 -0.166958" quat="0.766059 0.0227685 -0.0239271 0.641922" mass="1.63999" diaginertia="0.0205896 0.0200894 0.00134656"/>
+            <joint name="FR_joint3" pos="0 0 0" axis="0 1 0" range="-2.5307 1.57" actuatorfrcrange="-300 300"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FR_link3"/>
+            <geom size="0.048 0.013" pos="0 0.022 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.045 0.013 0.125" pos="0.003 0.022 -0.13" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.047 0.013" pos="0 0.022 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <body name="FR_foot" pos="0 -0.035053 -0.26">
+              <inertial pos="0 -0.00922002 0" quat="0.500005 0.499995 0.500005 0.499995" mass="2.05431" diaginertia="0.00818673 0.00444444 0.00444444"/>
+              <joint name="FR_TO_FOOT" pos="0 0 0" axis="0 1 0" range="-99999999 99999999" actuatorfrcrange="-100 100"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="FR_foot"/>
+              <geom size="0.09 0.026" pos="0 -0.008 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="HL_link1" pos="-0.29254 0.059957 -0.052238">
+        <inertial pos="-0.0788815 0.0881322 0.000103147" quat="0.269971 0.279675 0.649876 0.653114" mass="2.89276" diaginertia="0.010038 0.00917202 0.00538192"/>
+        <joint name="HL_joint1" pos="0 0 0" axis="1 0 0" range="-0.785 0.698" actuatorfrcrange="-300 300"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HL_link1"/>
+        <geom size="0.05 0.013" pos="-0.012 0 0" quat="0.707388 0 0.706825 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <geom size="0.065 0.043" pos="-0.09 0.095 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <body name="HL_link2" pos="-0.084999 0.13 0">
+          <inertial pos="0.00217294 0.0505098 -0.207263" quat="0.689259 -0.0428731 0.0334015 0.722473" mass="3.0117" diaginertia="0.0309582 0.0290355 0.00408443"/>
+          <joint name="HL_joint2" pos="0 0 0" axis="0 1 0" range="-1.57 1.57" actuatorfrcrange="-300 300"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HL_link2"/>
+          <geom size="0.05 0.0225" pos="0 0.04 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.05 0.0225 0.1" pos="0.005 0.04 -0.09" quat="0.999391 0 -0.0348994 0" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.065 0.04" pos="0 0.065 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <body name="HL_link3" pos="0 0.032535 -0.26">
+            <inertial pos="-0.00346688 -0.00821661 -0.166958" quat="0.766059 -0.0227685 0.0239271 0.641922" mass="1.63999" diaginertia="0.0205896 0.0200894 0.00134656"/>
+            <joint name="HL_joint3" pos="0 0 0" axis="0 1 0" range="-1.57 2.5307" actuatorfrcrange="-300 300"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HL_link3"/>
+            <geom size="0.048 0.013" pos="0 -0.022 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.045 0.013 0.125" pos="-0.003 -0.022 -0.13" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.047 0.013" pos="0 -0.022 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <body name="HL_foot" pos="0 0.035053 -0.26">
+              <inertial pos="0 0.00922002 0" quat="0.499995 0.500005 0.499995 0.500005" mass="2.05431" diaginertia="0.00818673 0.00444444 0.00444444"/>
+              <joint name="HL_TO_FOOT" pos="0 0 0" axis="0 1 0" range="-99999999 99999999" actuatorfrcrange="-100 100"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HL_foot"/>
+              <geom size="0.09 0.026" pos="0 0.008 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="HR_link1" pos="-0.29254 -0.062043 -0.052238">
+        <inertial pos="-0.0788815 -0.0881322 -0.000103147" quat="0.649876 0.653114 0.269971 0.279675" mass="2.89276" diaginertia="0.010038 0.00917202 0.00538192"/>
+        <joint name="HR_joint1" pos="0 0 0" axis="1 0 0" range="-0.698 0.785" actuatorfrcrange="-300 300"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HR_link1"/>
+        <geom size="0.05 0.013" pos="-0.012 0 0" quat="0.707388 0 0.706825 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <geom size="0.065 0.043" pos="-0.09 -0.095 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+        <body name="HR_link2" pos="-0.088999 -0.13 0">
+          <inertial pos="0.00217294 -0.0505098 -0.207263" quat="0.722473 0.0334015 -0.0428731 0.689259" mass="3.0117" diaginertia="0.0309582 0.0290355 0.00408443"/>
+          <joint name="HR_joint2" pos="0 0 0" axis="0 1 0" range="-1.57 1.57" actuatorfrcrange="-300 300"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HR_link2"/>
+          <geom size="0.05 0.0225" pos="0 -0.04 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.05 0.0225 0.1" pos="0.005 -0.04 -0.09" quat="0.999391 0 -0.0348994 0" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+          <geom size="0.065 0.04" pos="0 -0.065 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+          <body name="HR_link3" pos="0 -0.032535 -0.26">
+            <inertial pos="-0.00343905 0.00804318 -0.168188" quat="0.640627 0.0241394 -0.022993 0.767129" mass="1.66014" diaginertia="0.0208058 0.0203063 0.00135907"/>
+            <joint name="HR_joint3" pos="0 0 0" axis="0 1 0" range="-1.57 2.5307" actuatorfrcrange="-300 300"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HR_link3"/>
+            <geom size="0.048 0.013" pos="0 0.022 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.045 0.013 0.125" pos="-0.003 0.022 -0.13" type="box" rgba="0.792157 0.819608 0.933333 1"/>
+            <geom size="0.047 0.013" pos="0 0.022 -0.26" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            <body name="HR_foot" pos="0 -0.035053 -0.26">
+              <inertial pos="0 -0.00922002 0" quat="0.500005 0.499995 0.500005 0.499995" mass="2.05431" diaginertia="0.00818673 0.00444444 0.00444444"/>
+              <joint name="HR_TO_FOOT" pos="0 0 0" axis="0 1 0" range="-99999999 99999999" actuatorfrcrange="-100 100"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="HR_foot"/>
+              <geom size="0.09 0.026" pos="0 -0.008 0" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.792157 0.819608 0.933333 1"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="FL_joint1" joint="FL_joint1" gear="1" ctrllimited="true" ctrlrange="-100 100"/>
+    <motor name="FL_joint2" joint="FL_joint2" gear="1" ctrllimited="true" ctrlrange="-100 100"/>
+    <motor name="FL_joint3" joint="FL_joint3" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="FL_TO_FOOT" joint="FL_TO_FOOT" gear="1" ctrllimited="true" ctrlrange="-100 100"/>
+
+    <motor name="FR_joint1" joint="FR_joint1" gear="1" ctrllimited="true" ctrlrange="-100 100"/>
+    <motor name="FR_joint2" joint="FR_joint2" gear="1" ctrllimited="true" ctrlrange="-100 100"/>
+    <motor name="FR_joint3" joint="FR_joint3" gear="1" ctrllimited="true" ctrlrange="-100 100"/>
+    <motor name="FR_TO_FOOT" joint="FR_TO_FOOT" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+
+    <motor name="HL_joint1" joint="HL_joint1" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="HL_joint2" joint="HL_joint2" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="HL_joint3" joint="HL_joint3" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="HL_TO_FOOT" joint="HL_TO_FOOT" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+
+    <motor name="HR_joint1" joint="HR_joint1" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="HR_joint2" joint="HR_joint2" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="HR_joint3" joint="HR_joint3" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="HR_TO_FOOT" joint="HR_TO_FOOT" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+  </actuator>
+
+  <sensor>
+    <framequat     name='orientation' objtype='site' noise='0.001' objname='imu'/>
+    <framepos     name='position' objtype='site' noise='0.001' objname='imu'/>
+    <gyro          name='angular-velocity'    site='imu' noise='0.005' cutoff='34.9'/>
+    <velocimeter   name='linear-velocity'     site='imu' noise='0.001' cutoff='30'/>
+    <accelerometer name='linear-acceleration' site='imu' noise='0.005' cutoff='157'/>
+    <magnetometer  name='magnetometer'        site='imu'/>
+
+    <jointactuatorfrc name="FL_joint1_force" joint="FL_joint1"/>
+    <jointactuatorfrc name="FL_joint2_force" joint="FL_joint2"/>
+    <jointactuatorfrc name="FL_joint3_force" joint="FL_joint3"/>
+    <jointactuatorfrc name="FL_TO_FOOT_force" joint="FL_TO_FOOT"/>
+
+    <jointactuatorfrc name="FR_joint1_force" joint="FR_joint1"/>
+    <jointactuatorfrc name="FR_joint2_force" joint="FR_joint2"/>
+    <jointactuatorfrc name="FR_joint3_force" joint="FR_joint3"/>
+    <jointactuatorfrc name="FR_TO_FOOT_force" joint="FR_TO_FOOT"/>
+
+    <jointactuatorfrc name="HL_joint1_force" joint="HL_joint1"/>
+    <jointactuatorfrc name="HL_joint2_force" joint="HL_joint2"/>
+    <jointactuatorfrc name="HL_joint3_force" joint="HL_joint3"/>
+    <jointactuatorfrc name="HL_TO_FOOT_force" joint="HL_TO_FOOT"/>
+
+    <jointactuatorfrc name="HR_joint1_force" joint="HR_joint1"/>
+    <jointactuatorfrc name="HR_joint2_force" joint="HR_joint2"/>
+    <jointactuatorfrc name="HR_joint3_force" joint="HR_joint3"/>
+    <jointactuatorfrc name="HR_TO_FOOT_force" joint="HR_TO_FOOT"/>
+  </sensor>  
+</mujoco>

@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="lud1">
+  <mujoco>
+        <compiler meshdir="../meshes" discardvisual="false" />
+  </mujoco>
+
+  <link name="trunk">
+    <inertial>
+      <origin xyz="6.8032439e-03 1.7613329e-03 -4.8894424e-02"  rpy="0 0 0" />
+      <mass value="2.2512291e+01" />
+      <inertia
+        ixx="1.8868718e-01"
+        ixy="-2.4068695e-04"
+        ixz="1.3097654e-02"
+        iyy="1.1911150e+00"
+        iyz="-3.2840138e-04"
+        izz="1.2670589e+00" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0"  rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/trunk.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0"  rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/trunk.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0.425 0 -0.025"  rpy="0 0 0" />
+      <geometry>
+        <box size = "0.12 0.13 0.175"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 -0.05"  rpy="0 0 0" />
+      <geometry>
+        <box size = "0.56 0.3 0.17"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.41 0 -0.025"  rpy="0 0 0" />
+      <geometry>
+        <box size = "0.11 0.11 0.14"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="FL_link1">
+    <inertial>
+      <origin xyz="7.8881487e-02 8.8132218e-02 -1.0314678e-04"  rpy="0 0 0" />
+      <mass value="2.8927596e+00" />
+      <inertia
+        ixx="7.6494895e-03"
+        ixy="2.3271591e-03"
+        ixz="-5.6923966e-06"
+        iyy="7.7702523e-03"
+        iyz="-1.1891911e-05"
+        izz="9.1721945e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_link1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin  xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_link1.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.012 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.09 0.095 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.086" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_joint1" type="revolute">
+    <origin xyz="0.28429 0.059957 -0.052238" rpy="0 0 0" />
+    <parent link="trunk" />
+    <child link="FL_link1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.785" upper="0.698" effort="300" velocity="11" />
+  </joint>
+  <link name="FL_link2">
+    <inertial>
+      <origin xyz="-2.1729438e-03 5.0509814e-02 -2.0726308e-01" rpy="0 0 0" />
+      <mass value="3.0117000e+00" />
+      <inertia
+        ixx="2.9033277e-02"
+        ixy="4.5543768e-05"
+        ixz="-4.0408166e-04"
+        iyy="3.0644059e-02"
+        iyz="-2.8692415e-03"
+        izz="4.4007813e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_link2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_link2.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.00 0.04 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.045" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="-0.005 0.04 -0.09" rpy="0 0.069813 0" />
+      <geometry>
+        <box size = "0.1 0.045 0.2"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.00 0.065 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.08" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_joint2" type="revolute">
+    <origin xyz="0.088999 0.13 0" rpy="0 0 0" />
+    <parent link="FL_link1" />
+    <child link="FL_link2" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="300" velocity="11" />
+  </joint>
+  <link name="FL_link3">
+    <inertial>
+      <origin xyz="3.4390460e-03 -8.0431791e-03 -1.6818778e-01" rpy="0 0 0" />
+      <mass value="1.6601419e+00" />
+      <inertia
+        ixx="2.0321052e-02"
+        ixy="-7.7796541e-05"
+        ixz="1.4914051e-04"
+        iyy="2.0704691e-02"
+        iyz="-1.2842375e-03"
+        izz="1.4454152e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_link3.STL" />
+      </geometry>
+      <material  name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_link3.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0 -0.022 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.003 -0.022 -0.13" rpy="0 0 0" />
+      <geometry>
+        <box size = "0.09 0.026 0.25"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0 -0.022 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_joint3" type="revolute">
+    <origin xyz="0 0.032535 -0.26" rpy="0 0 0" />
+    <parent link="FL_link2" />
+    <child link="FL_link3" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.5307" upper="1.57" effort="300" velocity="11" />
+  </joint>
+  <link name="FL_foot">
+    <inertial>
+      <origin xyz="0.0000000e+00 9.2200242e-03 0.0000000e+00" rpy="0 0 0" />
+      <mass value="2.0543070e+00" />
+      <inertia
+        ixx="4.4444424e-03"
+        ixy="-0.0000000e+00"
+        ixz="-0.0000000e+00"
+        iyy="8.1867263e-03"
+        iyz="7.8103662e-08"
+        izz="4.4444432e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_foot.STL" />
+      </geometry>
+      <material name="">
+        <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FL_foot.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.0 0.008 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.052" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_TO_FOOT" type="revolute">
+    <origin xyz="0 0.035053 -0.26" rpy="0 0 0" />
+    <parent link="FL_link3" />
+    <child link="FL_foot" />
+    <axis xyz="0 1 0" />
+    <limit lower="-99999999" upper="99999999" effort="100" velocity="14" />
+  </joint>
+  <link name="FR_link1">
+    <inertial>
+      <origin xyz="7.8881487e-02 -8.8132218e-02 1.0314678e-04" rpy="0 0 0" />
+      <mass value="2.8927596e+00" />
+      <inertia
+        ixx="7.6494895e-03"
+        ixy="-2.3271591e-03"
+        ixz="5.6923966e-06"
+        iyy="7.7702523e-03"
+        iyz="-1.1891911e-05"
+        izz="9.1721945e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FR_link1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FR_link1.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.012 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.09 -0.095 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.086" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FR_joint1" type="revolute">
+    <origin xyz="0.28429 -0.062043 -0.052238" rpy="0 0 0" />
+    <parent link="trunk" />
+    <child link="FR_link1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.698" upper="0.785" effort="300" velocity="11" />
+  </joint>
+  <link  name="FR_link2">
+    <inertial>
+      <origin xyz="-2.1729442e-03 -5.0509814e-02 -2.0726308e-01" rpy="0 0 0" />
+      <mass value="3.0117000e+00" />
+      <inertia
+        ixx="2.9033276e-02"
+        ixy="-4.5543770e-05"
+        ixz="-4.0408198e-04"
+        iyy="3.0644058e-02"
+        iyz="2.8692415e-03"
+        izz="4.4007812e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="../meshes/FR_link2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FR_link2.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.00 -0.04 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.045" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="-0.005 -0.04 -0.09" rpy="0 0.069813 0" />
+      <geometry>
+        <box size = "0.1 0.045 0.2"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.00 -0.065 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.08" />
+      </geometry>
+    </collision>
+  </link>
+  <joint  name="FR_joint2" type="revolute">
+    <origin xyz="0.088999 -0.13 0"  rpy="0 0 0" />
+    <parent link="FR_link1" />
+    <child  link="FR_link2" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="300" velocity="11" />
+  </joint>
+  <link name="FR_link3">
+    <inertial>
+      <origin  xyz="3.4668810e-03 8.2166105e-03 -1.6695792e-01" rpy="0 0 0" />
+      <mass value="1.6399878e+00" />
+      <inertia
+        ixx="2.0103674e-02"
+        ixy="7.6721632e-05"
+        ixz="1.4467715e-04"
+        iyy="2.0491494e-02"
+        iyz="1.2592757e-03"
+        izz="1.4304262e-03" />
+    </inertial>
+    <visual>
+      <origin  xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FR_link3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin  xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FR_link3.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0 0.022 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.003 0.022 -0.13" rpy="0 0 0" />
+      <geometry>
+        <box size = "0.09 0.026 0.25"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0 0.022 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+      </geometry>
+    </collision>
+  </link>
+  <joint  name="FR_joint3" type="revolute">
+    <origin xyz="0 -0.032535 -0.26" rpy="0 0 0" />
+    <parent link="FR_link2" />
+    <child link="FR_link3" />
+    <axis  xyz="0 1 0" />
+    <limit lower="-2.5307" upper="1.57" effort="300" velocity="11" />
+  </joint>
+  <link name="FR_foot">
+    <inertial>
+      <origin xyz="0.0000000e+00 -9.2200242e-03 0.0000000e+00" rpy="0 0 0" />
+      <mass value="2.0543070e+00" />
+      <inertia
+        ixx="4.4444424e-03"
+        ixy="-0.0000000e+00"
+        ixz="-0.0000000e+00"
+        iyy="8.1867263e-03"
+        iyz="-7.8103662e-08"
+        izz="4.4444432e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FR_foot.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/FR_foot.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.0 -0.008 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.052" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FR_TO_FOOT" type="revolute">
+    <origin xyz="0 -0.035053 -0.26" rpy="0 0 0" />
+    <parent  link="FR_link3" />
+    <child link="FR_foot" />
+    <axis  xyz="0 1 0" />
+    <limit lower="-99999999" upper="99999999" effort="100" velocity="14" />
+  </joint>
+  <link
+    name="HL_link1">
+    <inertial>
+      <origin xyz="-7.8881487e-02 8.8132218e-02 1.0314678e-04"  rpy="0 0 0" />
+      <mass  value="2.8927596e+00" />
+      <inertia
+        ixx="7.6494895e-03"
+        ixy="-2.3271591e-03"
+        ixz="-5.6923966e-06"
+        iyy="7.7702523e-03"
+        iyz="1.1891911e-05"
+        izz="9.1721945e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh  filename="../meshes/HL_link1.STL" />
+      </geometry>
+      <material name="">
+        <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HL_link1.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="-0.012 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="-0.09 0.095 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.086" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HL_joint1" type="revolute">
+    <origin xyz="-0.29254 0.059957 -0.052238" rpy="0 0 0" />
+    <parent link="trunk" />
+    <child link="HL_link1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.785" upper="0.698" effort="300" velocity="11" />
+  </joint>
+  <link name="HL_link2">
+    <inertial>
+      <origin xyz="2.1729442e-03 5.0509814e-02 -2.0726308e-01" rpy="0 0 0" />
+      <mass value="3.0117000e+00" />
+      <inertia
+        ixx="2.9033276e-02"
+        ixy="-4.5543770e-05"
+        ixz="4.0408198e-04"
+        iyy="3.0644058e-02"
+        iyz="-2.8692415e-03"
+        izz="4.4007812e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HL_link2.STL" />
+      </geometry>
+      <material  name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HL_link2.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.00 0.04 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.045" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.005 0.04 -0.09" rpy="0 -0.069813 0" />
+      <geometry>
+        <box size = "0.1 0.045 0.2"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.00 0.065 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.08" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HL_joint2" type="revolute">
+    <origin  xyz="-0.084999 0.13 0" rpy="0 0 0" />
+    <parent  link="HL_link1" />
+    <child link="HL_link2" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="300" velocity="11" />
+  </joint>
+  <link name="HL_link3">
+    <inertial>
+      <origin xyz="-3.4668810e-03 -8.2166105e-03 -1.6695792e-01"  rpy="0 0 0" />
+      <mass value="1.6399878e+00" />
+      <inertia
+        ixx="2.0103674e-02"
+        ixy="7.6721632e-05"
+        ixz="-1.4467715e-04"
+        iyy="2.0491494e-02"
+        iyz="-1.2592757e-03"
+        izz="1.4304262e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HL_link3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HL_link3.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0 -0.022 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="-0.003 -0.022 -0.13" rpy="0 0 0" />
+      <geometry>
+        <box size = "0.09 0.026 0.25"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0 -0.022 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HL_joint3" type="revolute">
+    <origin xyz="0 0.032535 -0.26" rpy="0 0 0" />
+    <parent link="HL_link2" />
+    <child link="HL_link3" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="2.5307" effort="300" velocity="11" />
+  </joint>
+  <link name="HL_foot">
+    <inertial>
+      <origin xyz="0.0000000e+00 9.2200242e-03 0.0000000e+00" rpy="0 0 0" />
+      <mass value="2.0543070e+00" />
+      <inertia
+        ixx="4.4444424e-03"
+        ixy="-0.0000000e+00"
+        ixz="-0.0000000e+00"
+        iyy="8.1867263e-03"
+        iyz="7.8103662e-08"
+        izz="4.4444432e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HL_foot.STL" />
+      </geometry>
+      <material  name="">
+        <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HL_foot.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.0 0.008 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.052" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HL_TO_FOOT" type="revolute">
+    <origin xyz="0 0.035053 -0.26" rpy="0 0 0" />
+    <parent link="HL_link3" />
+    <child link="HL_foot" />
+    <axis xyz="0 1 0" />
+    <limit lower="-99999999" upper="99999999" effort="100" velocity="14" />
+  </joint>
+  <link name="HR_link1">
+    <inertial>
+      <origin xyz="-7.8881487e-02 -8.8132218e-02 -1.0314678e-04"  rpy="0 0 0" />
+      <mass value="2.8927596e+00" />
+      <inertia
+        ixx="7.6494895e-03"
+        ixy="2.3271591e-03"
+        ixz="5.6923966e-06"
+        iyy="7.7702523e-03"
+        iyz="1.1891911e-05"
+        izz="9.1721945e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HR_link1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HR_link1.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="-0.012 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="-0.09 -0.095 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.086" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HR_joint1" type="revolute">
+    <origin xyz="-0.29254 -0.062043 -0.052238" rpy="0 0 0" />
+    <parent link="trunk" />
+    <child link="HR_link1" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.698" upper="0.785" effort="300" velocity="11" />
+  </joint>
+  <link name="HR_link2">
+    <inertial>
+      <origin xyz="2.1729438e-03 -5.0509814e-02 -2.0726308e-01"  rpy="0 0 0" />
+      <mass value="3.0117000e+00" />
+      <inertia
+        ixx="2.9033277e-02"
+        ixy="4.5543768e-05"
+        ixz="4.0408166e-04"
+        iyy="3.0644059e-02"
+        iyz="2.8692415e-03"
+        izz="4.4007813e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HR_link2.STL" />
+      </geometry>
+      <material  name="">
+        <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HR_link2.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.00 -0.04 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.045" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.005 -0.04 -0.09" rpy="0 -0.069813 0" />
+      <geometry>
+        <box size = "0.1 0.045 0.2"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0.00 -0.065 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.08" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HR_joint2" type="revolute">
+    <origin xyz="-0.088999 -0.13 0" rpy="0 0 0" />
+    <parent link="HR_link1" />
+    <child link="HR_link2" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="300" velocity="11" />
+  </joint>
+  <link name="HR_link3">
+    <inertial>
+      <origin  xyz="-3.4390460e-03 8.0431791e-03 -1.6818778e-01"  rpy="0 0 0" />
+      <mass value="1.6601419e+00" />
+      <inertia
+        ixx="2.0321052e-02"
+        ixy="-7.7796541e-05"
+        ixz="-1.4914051e-04"
+        iyy="2.0704691e-02"
+        iyz="1.2842375e-03"
+        izz="1.4454152e-03" />
+    </inertial>
+    <visual>
+      <origin  xyz="0 0 0"  rpy="0 0 0" />
+      <geometry>
+        <mesh   filename="../meshes/HR_link3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HR_link3.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0 0.022 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.026" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="-0.003 0.022 -0.13" rpy="0 0 0" />
+      <geometry>
+        <box size = "0.09 0.026 0.25"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin  xyz="0 0.022 -0.26" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.026" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HR_joint3" type="revolute">
+    <origin xyz="0 -0.032535 -0.26"  rpy="0 0 0" />
+    <parent link="HR_link2" />
+    <child link="HR_link3" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="2.5307" effort="300" velocity="11" />
+  </joint>
+  <link name="HR_foot">
+    <inertial>
+      <origin  xyz="0.0000000e+00 -9.2200242e-03 0.0000000e+00"  rpy="0 0 0" />
+      <mass value="2.0543070e+00" />
+      <inertia
+        ixx="4.4444424e-03"
+        ixy="-0.0000000e+00"
+        ixz="-0.0000000e+00"
+        iyy="8.1867263e-03"
+        iyz="-7.8103662e-08"
+        izz="4.4444432e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HR_foot.STL" />
+      </geometry>
+      <material  name="">
+        <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/HR_foot.STL" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin  xyz="0.0 -0.008 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.052" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="HR_TO_FOOT" type="revolute">
+    <origin xyz="0 -0.035053 -0.26" rpy="0 0 0" />
+    <parent link="HR_link3" />
+    <child link="HR_foot" />
+    <axis xyz="0 1 0" />
+    <limit lower="-99999999" upper="99999999" effort="100" velocity="14" />
+  </joint>
+</robot>
